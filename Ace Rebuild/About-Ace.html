@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/ionicons@4.2.4/dist/ionicons.js"></script>
+    <title>About-Ace</title>
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    line-height: 1.5;
+    font-family: monospace;
+}
+
+/*global*/
+.container{
+    width:90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+button{
+    height: 40px;
+    width: 70%;
+    padding: 0 20px;
+    border: 2px solid  #582f0e;
+    border-radius: 100px;
+    margin-left: 50px;
+    margin-top: 50px;
+    background: transparent;
+    cursor: pointer;
+    
+}
+
+.button a{
+    text-decoration: none;
+    border-radius: 100px;
+    color: #582f0e;
+    
+}
+
+
+/*header*/
+#header-top{
+    background: #582f0e;
+    padding: 5px;
+    min-height: 5px;
+    
+}
+#header-middle{
+    background: #7f4f24;
+    padding: 5px;
+    min-height: 5px;
+}
+
+#header-bottom{
+    background: rgba(248, 212, 7, 0.555);
+    padding: 5px;
+    min-height: 5px;
+    
+}
+
+ion-icon{
+    color: white;
+    font-size: 35px;
+    float: right;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+#header-middle img{
+    width: 150px;
+    margin: auto;
+    display: block;
+    border-radius: 5px;
+    opacity: 0.6;
+}
+
+#header-bottom a{
+    color: rgb(9, 53, 22);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    cursor: pointer;
+} 
+
+#header-bottom li{
+    display: inline;
+    padding: 0 15px;
+}
+#header-bottom ul{
+   text-align: center;
+  
+}
+
+#header-bottom a:hover{
+    color: white;
+}
+
+@media (max-width: 721px) {
+    #header-bottom ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #header-bottom li{
+        margin: 5px;
+    }
+}
+
+/*section case1*/
+#case1 {
+    min-height: 400px;   
+    background:url('../image/spread.jpg') no-repeat  0 -200px; 
+    
+    text-align: center;
+}
+
+#case1 h1{
+    margin: 50px 0 10px;
+    font-size:55px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #7f4f24
+}
+
+/*section case2*/
+#case2 .container{
+   display: flex;
+   justify-content: space-evenly;
+}
+
+#column-c {
+  width: 55%;
+  padding: 15px 15px;
+}
+
+#case2 h1{
+    font: monospace;
+    font-size: 30px;
+    margin-top: 15px;
+    color: #582f0e;
+    font-style: italic;
+}
+
+#case2 p{
+    font-size: 15px;
+    margin-top: 5px;
+    color: #582f0e;
+}
+
+#column-d {
+  width: 35%;
+  padding: 15px 15px;
+}
+
+/*case3*/
+#case3{
+    background: #936639;
+}
+
+#case3 .container{
+   display: flex;
+   justify-content: space-evenly
+}
+
+
+#column-e {
+  width: 55%;
+  padding: 15px 15px;
+}
+
+#case3 h1{
+    font: monospace;
+    font-size: 30px;
+    margin-top: 15px;
+    color: #582f0e;
+    font-style: italic;
+}
+#case3 p{
+    font-size: 15px;
+    margin-top: 5px;
+    color: #582f0e;
+}
+
+#column-f {
+  width: 45%;
+  padding: 15px 15px;
+}
+
+
+#case3 p,
+#case3 li{
+    font-size: 15px;
+   
+    color: #582f0e;
+}
+
+footer{
+            background: #582f0e;
+            height: 5px;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 10px;
+}
+
+</style>
+<body>
+    <div id="header-top">
+        <div class="container">
+            <div id="online-contacts">
+                <a href=" 08164279799 / 09065964571"><ion-icon name="phone-portrait"> 08164279799 / 09065964571 </ion-icon></a> 
+                <a href="https://www.facebook.com/AceErrandsRunner1"><ion-icon name='logo-facebook'></ion-icon></a>
+                <a href="09065964571"><ion-icon name='logo-whatsapp'></ion-icon></a>
+                <a href=""><ion-icon name='logo-instagram'></ion-icon></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="header-middle">
+        <div class="container">
+            <div id="Logo">
+                <a href="Ace.html"><img src="image/logo.jpeg" alt="" ></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="header-bottom">
+        <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="Ace.html"><i class="fa fa-home"></i>HOME</a></li>
+                        <li><a href="About-Ace.html">ABOUT</a></li>
+                        <li><a href="Service-Ace.html">SERVICES</a></li>
+                        <li><a href="Testimonials-aceerrandsrunner.html">TESTIMONIALS</a></li>
+                        <li><a href="Contact-Ace.html">Contact</a></li>
+                        <li><a href="Price-list-aceerrandsrunner.html">PRICE-LIST</a></li>
+                        <li class="current"></i><a href="Login-Ace.html">Login</a></li>
+                    </ul>
+                </nav>
+        </div>
+    </div>
+
+    <section id="case1">
+        <div class="container">
+            <h1>WE SIMPLIFY LIFE</h1>
+        </div>
+    </section>
+
+
+    <section id="case2">
+        <div class="container">
+           <div id="column-c">
+            <h1>OUR MISSION </h1>
+            <p>Our mission is to help people give life a meaning, 
+                by buying them time, energy and passion to do what
+                 matters to them most deeply</p>
+           </div>
+           <div id="column-d">
+               <h1>OUR VISION </h1>
+               <p>Our vision is to heave humanity and add beautify to life, by positively touching lives of those we serve and communities we operate. </p>
+           </div>
+        </div>
+    </section>
+
+    
+    <section id="case3">
+        <div class="container">
+           <div id="column-e">
+            <h1>WHO WE ARE</h1>
+            <p>Ace ErrandsRunner provides services to busy clients.. We offer a wide variety of high quality services to help you take control of your time. 
+                We take on the work so you don't have to. We aim to become among the best concierge service providing company catering to your errand needs on time and effectively. <br><br>
+                Our staff takes care of your personal and business errands, and customizes our services to meet your specific needs, giving you the freedom to focus on what matters most in your life. <br><br>
+               Our business is to help your business and household by minimizing your busyness. Therefore, Ace ErrandsRunner is the company you should call upon when you need to time.
+            </p>
+           </div>
+           <div id="column-f">
+           <h1>OUR CORE VALUES </h1>
+           <ul>
+               <li><b>Work  With Heart:</b></li>
+               <p> We care deeply about the services we render to our clients.</p><br>
+               <li><b>Lift  Others Up:</b></li>
+               <p>Together, we can do more and be more.</p> <br>
+               <li><b>We  Value Time:</b></li>
+               <p>Time is precious, We value our time and the time of the people we serve.</p>
+           </ul>    
+        </div>
+    </section>
+
+    <section id="case4">
+        <div class="container">
+            <div id="founder"></div>
+            <div id="co-founder"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>KORAK Web Design, Copyright © 2021</p>
+    </footer>
+
+
+     
+</body>
+</html>

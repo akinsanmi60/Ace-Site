@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/ionicons@4.2.4/dist/ionicons.js"></script>
+    <title>Login-dashboard-Ace</title>
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    line-height: 1.5;
+    font-family: monospace;
+}
+
+/*global*/
+.container{
+    width:90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+/*header*/
+#header-top{
+    background: #582f0e;
+    padding: 5px;
+    min-height: 5px;
+
+}
+
+#header-top P{
+    color: white;
+    text-align: center;
+    font-size: 15px;
+  
+}
+
+#header-middle{
+    background: white;
+    min-height: 5px;
+    border-bottom: solid 2px rgba(248, 212, 7, 0.555);
+    margin-bottom: 10px;
+}
+
+#mini-nav{
+    display: flex;
+    float: right;
+    gap: 20px;
+}
+
+#mini-nav p{
+    text-align: center;
+    color: #582f0e;
+    font-size: 12px;
+}
+
+ion-icon{
+    color: #582f0e;
+    font-size: 20px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+#header-middle img{
+    width: 100px;
+    border-radius: 5px;
+    opacity: 0.9;
+    margin-top: 15px;
+    margin-bottom: -15px;
+}
+
+
+#header-bottom a:hover{
+    color: white;
+}
+
+@media (max-width: 721px) {
+    #header-bottom ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #header-bottom li{
+        margin: 5px;
+    }
+}
+
+/*section case1*/
+.sidenav {
+    height: 70%;
+    width: 130px;
+  position: fixed;
+  z-index: 1;
+  background: #582f0e;
+  overflow-x: hidden;
+  padding: 8px 0;
+}
+
+.sidenav a {
+  text-decoration: none;
+}
+
+#mini-sidenav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidenav ion-icon{
+    padding: 6px 8px;
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: -13px;
+    cursor: pointer;
+}
+
+.sidenav p{
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.sidenav a:hover {
+  color: white;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  padding: 10px 10px;
+}
+
+
+/*article for runerrand*/
+article h1{
+    color: #582f0e;
+    font-size: 30px;
+    margin: 15px;
+}
+
+input, textarea {
+    width: 50%;
+    height: 25px;
+    margin: 15px;
+    border: none;
+    border-bottom: 1px solid #7f4f24;
+    outline: none;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+#userdetails input, textarea{
+    width: 25%;
+}
+#workdetails input, textarea{
+    width: 25%;
+}
+
+
+article ul{
+    margin-left: 30px;
+}
+
+article p{
+    color: #582f0e;
+    font-size: 20px;
+}
+
+#userdetails p{
+margin-left: 15px;
+}
+
+article .submit1{
+    height: 30px;
+    width: 20%;
+    border: 2px solid  #582f0e;
+    border-radius: 0px 10px 0 10px;
+    padding: 0 5px;
+	margin: 15px ;
+    margin-left: 100px;
+    background: transparent;
+    cursor: pointer;
+    color: #582f0e;
+}
+
+/*Hide all except first form*/
+#errands-form,
+#survey {
+	display: none;
+} 
+
+
+
+
+/*Dashboard*/
+#profile,
+#transaction,
+#survey{
+    background: white;
+	border-radius: 5px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px;
+    padding-left: 25px;
+    padding-right: 50px;
+	box-sizing: border-box;
+	width: 75%;
+    min-height: 300px;
+	margin: 5px auto;
+}
+
+#profile-container{
+    display: flex;
+}
+
+
+#transaction{
+    margin-top: 100px;
+}
+
+
+#spill input,
+#spilt input{
+    width: 80%;
+    height: 25px;
+    margin-top: 15px;
+}
+
+
+#profile button{
+    height: 30px;
+    width: 20%;
+    border-radius: 0px 10px 0 10px;
+    padding: 0 5px;
+	margin: 15px;
+    border: none;
+    background: #582f0e;
+    cursor: pointer;
+    color: white;
+}
+
+
+#profile h1, #transaction h1{
+    color: #582f0e;
+    font-size: 25px;
+    margin-bottom: 3px;
+}
+
+
+ hr{
+    margin-bottom: 10px;
+    margin-top: auto;
+    width: 33%;
+    color: #582f0e;
+}
+
+#transaction hr{
+    width: 40%;
+}
+
+em{
+    font-size: 15px;
+}
+
+/* Run errands*/
+#userdetails h1,
+#workdetails h1{
+    margin-bottom: 20px;
+    text-align: center;
+}
+#userdetails hr,
+#workdetails hr{
+    margin-top: 0;
+    width: 25%;
+    
+}
+
+#userdetails p,
+#workdetails p{
+    margin-top: 10px;
+}
+
+#userdetails .submit1,
+#workdetails .submit1{
+    margin-left: 380px;
+}
+
+
+/*Feedback*/
+#survey h1{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#survey p{
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+#icon-rating{
+    display: flex;
+    justify-content: center;
+}
+
+#survey ion-icon{
+    font-size: 60px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#survey textarea{
+    border: 2px solid #9e836c;
+    width: 95%;
+    height: 100px;
+    padding: 5px 10px;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+
+
+
+/*footer*/
+footer{
+    background: #582f0e;
+    height: 5px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 10px;
+    margin-top: 90px;
+}
+
+
+
+
+</style>
+<body>
+    
+    <div id="header-top">
+        <div class="container">
+            <div id="online-contacts">
+                <p>Ace-ErrandsRunner Paypoint</p>
+             </div>
+        </div>
+    </div>
+
+
+    <div id="header-middle">
+        <div class="container">
+            <div id="Logo">
+                <a href="Ace.html"><img src="image/logo.jpeg" alt="" ></a>
+            </div>
+
+           <div id="mini-nav">
+                <div id="profile-name">
+                    <ion-icon name="person" id="profile-name-icon"></ion-icon>
+                    <p><b>NAME</b></p>
+                </div>
+                <div id="referral">
+                    <ion-icon name="git-network" id="referral-icon"></ion-icon>
+                    <p><b>REFERRALS</b></p>
+                </div>
+                <div id="log-out">
+                    <ion-icon name="log-out" id="log-out-icon"></ion-icon>
+                    <p><b>LOGOUT</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="case1">
+        
+        <div class="sidenav">
+            <div class="container">
+                <div id="mini-sidenav">
+                        <div id="dashboard">
+                            <ion-icon name="apps" id="dashboard-icon"></ion-icon>
+                            <p><b>Dashboard</b></p>
+                         </div>
+                        <div id="model">
+                            <ion-icon name="logo-model-s" id="Run-errands-icon"></ion-icon>
+                            <p><b>Run Errand</b></p>
+                        </div>
+                        <div id="price">
+                            <ion-icon name="pricetags" id="pricr-tags-icon"></ion-icon>
+                            <p><b>Price list</b></p>
+                        </div>
+                        <div id="talk">
+                            <ion-icon name="chatboxes" id="chat-icon"></ion-icon>
+                            <p><b>Feedback</b></p>
+                        </div>
+                </div>
+            </div>
+        </div>
+        
+        
+              <article class="main">
+                <div class="container">
+                <form id="profile-dashboard">
+                    <h1>Welcome back,</h1>
+                <div id="profile">
+                    <h1>Profile Details</h1>
+                    <div id="profile-container">
+                        <div id="spill">
+                            <input type="text" name="" id="fname" placeholder="First-Name">
+                        <input type="email" name="" id="profile-email" placeholder="Email">
+                        <input type="text" name="" id="profile-DOB" placeholder="Date of Birth">
+                        <input type="text" name="" id="profile-sex" placeholder="Gender">
+                    
+                        </div>
+                        <div id="spilt">
+                        <input type="text" name="" id="lname" placeholder="Last-Name">
+                        <input type="number" name="" id="profile-phonenumber" placeholder="Mobile Number">
+                        <input type="text" name="" id="profile-username" placeholder="Username">
+                    
+                        </div>
+                    </div>
+                     <button class="submit" id="save-button">Save changes</button>
+
+                </div>
+
+                <div id="transaction">
+                    <h1>Transaction History</h1>
+                </div>
+                </form>
+            </div>
+              </article>
+
+
+             
+
+
+
+            <article class="main">
+                <div class="container">
+
+                <form id="errands-form">
+                    <div id="userdetails">
+                        <h1>Run An Errand</h1>
+
+                        <p>Contact detail <em>(for delivery)</em></p>
+                            <input type="text" name="" id="fname" placeholder="First-Name">
+                            <input type="text" name="" id="lname" placeholder="Last-Name">
+                            <input type="email" name="" id="email" placeholder="Enter Your Email">
+                            <input type="number" name="" id="phone" placeholder="Phone Number">
+                    </div>
+                     
+                    <div id="workdetails">
+                        
+                         <h1>Errand Details</h1>
+
+                        <ul>
+                            <li><p>Groceries / Market Errand</p>
+                                <button>Upload</button>: <p> image of errand list</p>
+                                <input type="text" name="" id="fname" placeholder="Value of Groceries">
+                                <input type="date" name="" id="fname" placeholder="Date to render service">                            </li>
+                            <li>
+                                <p>Laundry</p>
+                                <input type="text" name="" id="fname" placeholder="Number of bags">
+                                <input type="text" name="" id="fname" placeholder="Frequency">
+                                <input type="date" name="" id="fname" placeholder="Date to render service">                            </li>
+                            <li>
+                                <p>House cleaning</p>
+                                <input type="text" name="" id="fname" placeholder="Type of house">
+                                <input type="text" name="" id="fname" placeholder="Frequency">
+                                <input type="date" name="" id="fname" placeholder="Date to render service">
+                                
+                            </li>
+                            <li><p>Other errands</p>
+                                <textarea name="" id="" cols="30" rows="100" placeholder="Please specify"></textarea>
+                            </li>
+                        </ul>
+
+                             <button type="submit" class="submit1">Run</button>
+                    </div>
+                </form>
+                
+            </div>
+              </article>
+
+
+
+            <article class="main">
+                <div class="container">
+                    <div id="survey">
+                            <h1>Rate Us</h1>
+
+                        <div id="icon-rating">
+                            <div id="rate1">
+                                <ion-icon name="star-outline"></ion-icon>
+                            </div>
+                            <div id="rate2">
+                                <ion-icon name="star-outline"></ion-icon>
+                            </div>
+                            <div id="rate3">
+                                <ion-icon name="star-outline"></ion-icon>
+                            </div>
+                            <div id="rate4">
+                                <ion-icon name="star-outline"></ion-icon>
+                            </div>
+                            <div id="rate5">
+                                <ion-icon name="star-outline"></ion-icon>
+                            </div>
+                        </div>
+
+                            <textarea name="" id="" cols="30" rows="100" placeholder="Your reasons"></textarea>
+                
+                    </div>
+                </div>
+            </article>    
+
+
+    </div>
+
+
+
+    <footer>
+        <p>KORAK Web Design, Copyright © 2021</p>
+    </footer>
+
+
+
+</body>  
+<script>
+    //Getting the sidebar icons
+    const dash = document.getElementById("dashboard-icon")
+    const runerrand = document.getElementById("Run-errands-icon")
+    const Feedback = document.getElementById("chat-icon")
+
+    //Getting the forms
+    const formDash = document.getElementById("profile-dashboard")
+    const formErrands = document.getElementById("errands-form")
+    const formFeed = document.getElementById("survey")
+
+
+    // open-dashboard
+    dash.addEventListener("click", (e) =>{
+            formDash.style.display = "block"
+            formErrands.style.display = "none"
+            formFeed.style.display = "none"
+    })
+
+    // open run-errand
+    runerrand.addEventListener("click", (e) =>{
+        formDash.style.display = "none"
+            formErrands.style.display = "block"
+            formFeed.style.display = "none"
+    })
+
+    //open feedback
+    Feedback.addEventListener("click", (e) =>{
+        formDash.style.display = "none"
+            formErrands.style.display = "none"
+            formFeed.style.display = "block"
+    })
+
+
+
+    //Getting input for profile-dashboard
+    const profileNumber = document.getElementById("profile-phonenumber")
+    const dob = document.getElementById("profile-DOB")
+    const profileSex = document.getElementById("profile-sex")
+    const username = document.getElementById("profile-username")
+    const firstName = document.getElementById("fname")
+
+
+    
+
+
+
+    //over function validation
+        function ValidateNumber(profileNumber){
+            let numberRegex= /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+            console.log(numberRegex.test(profileNumber))
+            if (numberRegex.test(profileNumber)){
+                return true;
+            }else{
+                return false;
+            }
+
+        }
+
+
+        function validateUsername(username){
+                let nameRegex = /^[a-zA-Z\-]+$/; 
+                console.log(nameRegex.test(username))
+                if (nameRegex.test(username)) {
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+
+    // dashboard-validation
+    const saveButton = document.getElementById("save-button")
+
+    saveButton.addEventListener("click",(e) =>{
+        e.preventDefault();
+
+        function validationFirstName(){
+                let nameRegex = /^[a-zA-Z\-]+$/;
+                console.log(nameRegex.test(firstName))
+                if (nameRegex.test(firstName)) {
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+
+
+
+
+            ValidateNumber(profileNumber)
+            validateUsername(username)
+        
+    })
+
+    
+
+
+
+
+
+
+
+</script> 
+</html>
